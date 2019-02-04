@@ -363,7 +363,7 @@ function SELECT_PLUGINS {
 					gunzip GeoLiteCity.dat.gz
 					mv -v GeoLiteCity.dat /usr/share/GeoIP/GeoIPCity.dat
 					rm GeoLiteCity.dat.gz
-					apt-get -y install php5-geoip
+					apt-get -y install php7.0-geoip
 				fi
 				;;
 
@@ -684,7 +684,7 @@ function SELECT_PLUGINS {
 				unpack="tar -zxvf $file -C /tmp/"
 				if DOWNLOAD_PLUGIN ; then
 					mv /tmp/plugins/* $TEMP_PLUGIN_DIR
-					apt-get -y install php5-geoip ffmpeg curl libzen0 libmediainfo0 mediainfo unrar-free
+					apt-get -y install php7.0-geoip ffmpeg curl libzen0 libmediainfo0 mediainfo unrar-free
 				fi
 				;;
 
@@ -706,7 +706,7 @@ function APT_DEPENDENCIES {
 	apt-get update
 	apt-get -y install openssl git apache2 apache2-utils build-essential libsigc++-2.0-dev \
 	libcurl4-openssl-dev automake libtool libcppunit-dev libncurses5-dev libapache2-mod-scgi \
-	php5 php5-curl php5-cli libapache2-mod-php5 screen unzip libssl-dev curl
+	php7.0 php7.0-curl php7.0-cli libapache2-mod-php7.0 screen unzip libssl-dev curl
 }
 
 # Function for setting up xmlrpc, libtorrent and rtorrent
